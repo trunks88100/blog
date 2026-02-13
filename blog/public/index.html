@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./assets/blog.css">
+    <title>Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./assets/images/coffee.png" type="image/png">
+
+</head>
+<body style="background-color: var(--main-color);">
+    <div class="covering">
+        <button id="access">Access</button>
+    </div>
+    <div class="index-box">
+        <ul>
+            <li><a href="/blog/signup_view.php">Sign up</a></li>
+            <li> <a href="/blog/login_view.php">Log in</a> </li>
+            <li><a href="dashboard.php?user=guest">Guest</a></li>
+        </ul>
+    </div>
+
+
+<script>
+    function slide(el, distance){
+        el.style.transform=`translateX(${distance})`;
+    }
+    document.getElementById('access').addEventListener('click', () =>{
+        let covering = document.querySelector('.covering');
+        let indexBox = document.querySelector('.index-box');
+        slide(covering, "50vw");
+        slide(indexBox, "-25vw");
+        indexBox.style.opacity="1";
+    })
+
+
+</script>
+</body>
+</html>
